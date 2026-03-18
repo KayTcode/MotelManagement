@@ -9,5 +9,7 @@ namespace Services.Interface
     public interface ICacheService
     {
         Task SetTokenAysnc(int userId, string refeshToken, TimeSpan expiry);
+        Task<string> GetTokenAsync(int userId);
+        Task RemoveTokenAsync(int userId);
     }
 }
